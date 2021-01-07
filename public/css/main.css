@@ -1,0 +1,411 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    position: relative;
+    color: #ffffff;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    height: 142px;
+    min-width: 850px;
+}
+
+.red {
+    color: #e33b11;
+}
+
+.header-img {
+    margin-left: 20px;
+}
+
+.title {
+    font-family: "Times New Roman", serif;
+    font-size: 60px;
+    font-weight: 100;
+    margin: 0;
+    margin-left: 32px;
+    padding-top: 30px;
+}
+
+.title a {
+    color: #ffffff;
+}
+
+.title a:hover {
+    text-decoration: none;
+}
+
+.sub-title {
+    font-size: 24px;
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.header-img img {
+    margin: 0;
+    margin-right: 30px;
+    width: 138px;
+}
+
+.left {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.right {
+    width: calc(100% - 300px);
+    display: inline-block;
+    vertical-align: top;
+}
+
+#filter {
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    margin: 20px 0 0 20px;
+    padding: 10px 15px;
+    box-shadow: 2px 0px 5px #444444;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.filter-container {
+    margin-top: 15px;
+}
+
+.filter-info {
+    min-height: 50px;
+    max-height: 70px;
+}
+
+.filter-input-label {
+    display: inline-block;
+    width: 70px;
+}
+
+.filter-input {
+    display: inline-block;
+}
+
+.filter-input input {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border-color: #eeeeee;
+    outline: none;
+}
+
+#filter-min-price {
+    width: 52px;
+}
+
+#filter-max-price {
+    width: 52px;
+}
+
+#filter-category {
+    border-radius: 4px;
+    width: 162px;
+    padding: 2px 4px;
+    outline: none;
+}
+
+#filter-condition-spicy {
+    margin-top: -15px;
+}
+
+#filter-condition-spicy fieldset {
+    border-radius: 4px;
+    border-color: #ffffff;
+}
+
+#filter-search {
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 20px;
+    background: #212324;
+    padding: 5px 10px;
+    text-decoration: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+#filter-search:hover {
+    background: #323538;
+    text-decoration: none;
+}
+
+#add-new-dish {
+    position: absolute;
+    left: 19px;
+    bottom: 22px;
+    border-radius: 4px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    background: #3db33d;
+    border: solid#3db33d 2px;
+    text-decoration: none;
+    padding: 8px 80px;
+    cursor: pointer;
+}
+
+#add-new-dish:hover {
+    background: #5dd467;
+    text-decoration: none;
+}
+
+#add-new-dish i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+
+
+#dishes {
+    margin: 20px 0 0 50px;
+    padding-right: 15px;
+    position: relative;
+}
+
+#dishes-container {
+    overflow-y: scroll;
+    max-height: 500px;
+}
+
+.category {
+    margin-bottom: 15px;
+}
+
+.category-name h2 {
+    font-size: 24px;
+    margin-bottom: -10px;
+}
+
+.dish {
+    max-width: 300px;
+    width: 300px;
+    max-height: 500px;
+    display: inline-block;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    margin-right: 35px;
+    margin-bottom: 20px;
+}
+
+.dish-header a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dish-header img {
+    text-align: center;
+    min-height: 250px;
+    max-width: 300px;
+    max-height: 250px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.dish-body {
+    padding: 10px 15px;
+    position: relative;
+}
+
+.dish-edit {
+    position: absolute;
+    top: 70px;
+    right: 15px;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    background: transparent;
+}
+
+.dish-del {
+    position: absolute;
+    top: 70px;
+    right: 15px;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    background: transparent;
+}
+
+.dish-body button i {
+    font-size: 22px;
+}
+
+.dish-content:first-child {
+    margin-top: 5px;
+}
+
+.dish-content {
+    margin-top: 10px;
+}
+
+.dish-price {
+    font-family: 'Oxygen';
+}
+
+.dish-label {
+    width: 70px;
+    display: inline-block;
+}
+
+.dish-description {
+    vertical-align: bottom;
+    width: 190px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+
+
+/* dialog begin */
+dialog {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    padding: 0;
+    background: white;
+    color: black;
+    display: block;
+}
+
+dialog:not([open]) {
+    display: none;
+}
+
+dialog+.backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+._dialog_overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+dialog.fixed {
+    position: fixed;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#dialog-close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 24px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    color: #000000;
+    outline:none;
+}
+
+.dialog-body {
+    padding: 15px 30px;
+}
+
+.dialog-body h1 {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+.dialog-content {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.dialog-input-label {
+    width: 115px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.dialog-input {
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.dialog-input input {
+    padding: 6px 12px;
+    width: 250px;
+}
+
+#dialog-spicy {
+    padding: 6px 2px;
+    width: 280px;
+}
+
+.success-btn {
+    background: #3db33d;
+    border: solid#3db33d 2px;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.info-btn {
+    background: #3d90db;
+    border: solid #6381dc 2px;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background: #ed4126;
+    border: solid #f9380a 2px;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+dialog button {
+    float: right;
+    margin-left: -5px;
+    color: #ffffff;
+    padding: 8px 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* dialog end */

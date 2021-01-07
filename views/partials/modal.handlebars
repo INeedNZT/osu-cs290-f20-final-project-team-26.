@@ -1,0 +1,69 @@
+<dialog>
+    <button type="button" id="dialog-close">
+        &times;
+    </button>
+
+    <div class="dialog-body">
+        <h2 id="dialog-title">
+            {{#if isAdd}}
+            Create new dish
+            {{else}}
+            Update chosen dish
+            {{/if}}
+        </h2>
+
+        <div class="dialog-content">
+            <label for="add-name" class="dialog-input-label">Name: </label>
+            <div class="dialog-input">
+                <input type="text" name="add-name" id="add-name">
+            </div>
+        </div>
+
+        <div class="dialog-content">
+            <label for="add-url" class="dialog-input-label">PhotoURL: </label>
+            <div class="dialog-input">
+                <input type="text" name="add-url" id="add-url">
+            </div>
+        </div>
+
+        <div class="dialog-content">
+            <label for="add-price" class="dialog-input-label">Price: </label>
+            <div class="dialog-input">
+                <input type="number" name="add-price" id="add-price">
+            </div>
+        </div>
+
+        <div class="dialog-content">
+            <label for="add-spicy" class="dialog-input-label">Spicy: </label>
+            <div class="dialog-input">
+                <select id="dialog-spicy" class="dialog-spicy" name="dialog-spicy">
+                    <option value="1" selected>Medium</option>
+                    <option value="2">Mild</option>
+                    <option value="3">Spicy</option>
+                    <option value="4">Very Spicy</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="dialog-content">
+            <label for="add-category" class="dialog-input-label">Category: </label>
+            <div class="dialog-input">
+                <input type="text" name="add-category" id="add-category">
+            </div>
+        </div>
+
+    </div>
+    {{#if isAdd}}
+    <button class="success-btn" id="dialog-add">
+        Add Dish
+    </button>
+    {{else}}
+    <button class="info-btn" id="dialog-update">
+        Update Dish
+    </button>
+    {{/if}}
+    <button class="cancel-btn" id="dialog-cancel">
+        Cancel
+    </button>
+</dialog>
+<div class="backdrop"></div>

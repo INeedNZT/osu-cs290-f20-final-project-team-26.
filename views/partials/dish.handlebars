@@ -1,0 +1,32 @@
+<div class="dish">
+    <div class="dish-header">
+        <a href="#">
+            <img src="{{url}}" >
+        </a>
+    </div>
+    <div class="dish-body" data-id="{{_id}}">
+        <div class="dish-content">
+            <label class="dish-label">Name:</label>
+            <span class="dish-name">{{name}}</span>
+        </div>
+        <div class="dish-content">
+            <label class="dish-label">Price:</label>
+            <span class="dish-price">${{price}}</span>
+        </div>
+        <div class="dish-content">
+            <label class="dish-label">Spicy:</label>
+            <span class="dish-spicy">
+                {{#times spicy}}
+                    <i class="fas fa-pepper-hot red"></i>
+                {{/times}}
+            </span>
+        </div>
+        <div class="dish-content">
+            <label class="dish-label">Category:</label>
+            <span class="dish-category">
+                {{category}}
+            </span>
+        </div>
+        <button class="dish-del"><i class="far fa-trash-alt"></i></button>
+    </div>
+</div>

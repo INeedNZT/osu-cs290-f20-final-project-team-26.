@@ -1,0 +1,61 @@
+<aside id="filter">
+    <h2>Filters</h2>
+    <div class="filter-container">
+        <div class="filter-info">
+            <label for="filter-name" class="filter-input-label">Name: </label>
+            <div class="filter-input">
+                <input type="text" name="filter-name" value="{{query.name}}" id="filter-name" placeholder="Enter dish name">
+            </div>
+        </div>
+    </div>
+
+    <div class="filter-container">
+        <div class="filter-info">
+            <label for="filter-min-price" class="filter-input-label">Price: </label>
+            <div class="filter-input">
+                <input type="text" name="filter-min-price" id="filter-min-price" placeholder="min" value="{{query.min}}">
+            </div>
+            <span>-</span>
+            <div class="filter-input">
+                <input type="text" name="filter-max-price" id="filter-max-price" placeholder="max" value="{{query.max}}">
+            </div>
+        </div>
+    </div>
+
+    <div class="filter-container">
+        <div class="filter-info">
+            <label for="filter-category" class="filter-input-label">Category: </label>
+            <div class="filter-input">
+                <select id="filter-category" class="filter-input" name="filter-category">
+                 
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="filter-container">
+        <fieldset id="filter-condition-spicy">
+            <legend>Spicy</legend>
+            <div>
+                <input type="checkbox" id="filter-medium" value="1">
+                <label for="filter-medium">Medium</label>
+            </div>
+            <div>
+                <input type="checkbox" id="filter-mild" value="2">
+                <label for="filter-mild">Mild</label>
+            </div>
+            <div>
+                <input type="checkbox" id="filter-spicy" value="3">
+                <label for="filter-spicy">Spicy</label>
+            </div>
+            <div>
+                <input type="checkbox" id="filter-vspicy" value="4">
+                <label for="filter-vspicy">Very Spicy</label>
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="filter-container">
+        <button id="filter-search">Search</button>
+    </div>
+</aside>

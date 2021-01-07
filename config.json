@@ -1,0 +1,7 @@
+{
+    "db_name": "my_db",
+    "db_url": "mongodb://localhost:27017",
+    "dish_c": "dishes",
+    "category_c": "category",
+    "dev_port": 8080
+}
